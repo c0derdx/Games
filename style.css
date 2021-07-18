@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.dinosaur {
+    height: 100px;
+    width: 100px;
+    overflow: hidden;   
+    position: absolute;
+    bottom: 0;
+    transition: 0.4s;
+}
+
+.dinosaur img {
+    width: 100%;
+}
+
+.jump  {
+    bottom: 1000px;
+}
+
+.box {
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    animation: left_transition 5s  linear infinite;
+}
+
+@keyframes left_transition {
+    from {
+        right: 0;
+    }
+    to {
+        right: 100%;
+    }
+}
