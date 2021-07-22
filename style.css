@@ -4,32 +4,66 @@
     box-sizing: border-box;
 }
 
+body {
+    overflow: hidden;   
+}
 
-.dinosaur {
-    height: 100px;
-    width: 100px;
+.city {
+    background-image:url("PngItem_29192.png");
+    background-size: cover;
+    background-repeat: repeat;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    animation: left_transition 10s linear infinite;
+    pointer-events: none;
+}
+
+.play__btn {
+    padding:  10px 20px;
+    display: block;
+    margin: 20px auto;
+}
+
+.score__card {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+.character__div {
+    height: 120px;
     overflow: hidden;   
     position: absolute;
     bottom: 0;
-    transition: 0.4s;
+    /* transition: 0.3s; */
 }
 
-.dinosaur img {
-    width: 100%;
+.character__div img {
+    height: 100%;
 }
 
 .jump  {
-    bottom: 1000px;
+    animation: jump 0.6s ease-in-out;
 }
 
 .box {
-    width: 40px;
+    width: 60px;
     height: 40px;
-    background-color: black;
+    /* background-color: white; */
     position: absolute;
-    bottom: 0px;
-    right: 0;
-    animation: left_transition 5s  linear infinite;
+    bottom: 0;
+    right: -60px;
+    animation: left_transition 5s  linear;
+    background-image: url("/alien.png");
+    background-size: cover;
+}
+
+.box img {
+    width: 100%;
+    height: 100%;
 }
 
 @keyframes left_transition {
@@ -38,5 +72,19 @@
     }
     to {
         right: 100%;
+    }
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+
+    50% {
+        bottom: 150px;
+    }
+
+    100% {
+        bottom: 0;
     }
 }
