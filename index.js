@@ -16,6 +16,7 @@ function startGame() {
     playBtn.style.display = "none";
     score = 0;
     isgameOver = false;
+    character.src = "captainamerica__running.gif";
     scoreRunner();
     generator();
 

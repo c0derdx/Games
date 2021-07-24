@@ -6,29 +6,60 @@
 
 body {
     overflow: hidden;   
+    background-color: deepskyblue;
 }
 
-.city {
-    background-image:url("PngItem_29192.png");
-    background-size: cover;
-    background-repeat: repeat;
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    animation: left_transition 10s linear infinite;
+.building {
+    z-index: -1;
+    display: block;
     pointer-events: none;
+    position: absolute;
+    animation: build 20s linear infinite;
+    bottom: -25px;
+    width: 300px;
+}
+
+.building img {
+    width: 100%;
+}
+
+.build1 {
+    animation-delay: -4s;
+}
+
+.build2 {
+    animation-delay: -7s;
+}
+
+.build3{
+    animation-delay: -10s;
+}
+
+.build4{
+    animation-delay: -13s;
+}
+
+.build5{
+    animation-delay: -16s;
 }
 
 .play__btn {
     padding:  10px 20px;
+    border-radius: 5px;
+    border: 2px solid black;
     display: block;
     margin: 20px auto;
+    outline: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: yellow;
 }
 
-.score__card {
+.scorecard__div {
     position: absolute;
-    top: 0;
-    right: 20px;
+    top: 5%;
+    left: 20px;
     font-size: 20px;
     font-family: sans-serif;
 }
@@ -38,6 +69,7 @@ body {
     overflow: hidden;   
     position: absolute;
     bottom: 0;
+    left: 20px;
     /* transition: 0.3s; */
 }
 
@@ -51,13 +83,13 @@ body {
 
 .box {
     width: 60px;
-    height: 40px;
+    height: 60px;
     /* background-color: white; */
     position: absolute;
     bottom: 0;
     right: -60px;
     animation: left_transition 5s  linear;
-    background-image: url("/alien.png");
+    background-image: url("rsft2s.png");
     background-size: cover;
 }
 
@@ -86,5 +118,14 @@ body {
 
     100% {
         bottom: 0;
+    }
+}
+
+@keyframes build {
+    from {
+        right: -300px;
+    }
+    to {
+        right: 100%;
     }
 }
