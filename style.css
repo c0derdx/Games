@@ -69,7 +69,7 @@ body {
     overflow: hidden;   
     position: absolute;
     bottom: 0;
-    left: 20px;
+    left: 0;
     /* transition: 0.3s; */
 }
 
@@ -113,7 +113,7 @@ body {
     }
 
     50% {
-        bottom: 150px;
+        bottom: 180px;
     }
 
     100% {
